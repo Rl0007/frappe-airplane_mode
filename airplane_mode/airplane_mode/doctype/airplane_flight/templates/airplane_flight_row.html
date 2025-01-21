@@ -1,0 +1,20 @@
+
+<div class="card p-2 m-2">
+    <h3 id="airline_{{doc.name}}"></h3>
+    <h4 class="mt-1">{{doc.source_airport_code}}->{{doc.destination_airport_code}}</h4>
+
+    <h4 class="mt-2">{{frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")}}|{{doc.time_of_departure}}|{{frappe.utils.format_duration(doc.duration)}}</h4>
+    <a  href="/{{ doc.route |e }}" class="text-info mt-2">View Flight</a>
+</div>
+<!-- this is a sample default list template -->
+<script>
+
+    document.addEventListener("DOMContentLoaded",async()=>{
+        var docname = "{{doc.airplane}}"
+        var airline_id = "{{doc.name}}"
+        var data = await get_airline(docname)
+        if(data.data.airline){
+            document.getElementById(`airline_${airline_id}`).innerText = data.data.airline
+        }
+    })
+</script>
