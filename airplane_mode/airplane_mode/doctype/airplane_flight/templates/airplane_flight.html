@@ -1,0 +1,37 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title |e }}</h1>
+
+<h3>Flight Details</h3>
+
+<ul>
+    <li>Airline : <span id="airline_name"></span></li>
+    <li>{{doc.source_airport_code}}->{{doc.destination_airport_code}}</li>
+    <li>{{doc.date_of_departure.strftime('%Y-%m-%d')}}|{{doc.time_of_departure}}</li>
+    <li>Duration:{{frappe.utils.format_duration(doc.duration)}}</li>
+
+</ul>
+
+<a href="/book-a-flight/new?flight={{title |e}}" class="btn btn-sm btn-info">Book Flight</a>
+
+{% endblock %}
+
+
+{% block extra_scripts %}
+
+<script>
+
+    document.addEventListener("DOMContentLoaded",async()=>{
+        var docname = "{{doc.airplane}}"
+        var data = await get_airline(docname)
+        if(data.data.airline){
+            document.getElementById("airline_name").innerText = data.data.airline
+        }
+    })
+</script>
+
+
+{% endblock %}
+<!-- this is a sample default web page template -->
+
