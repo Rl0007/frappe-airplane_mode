@@ -10,6 +10,12 @@ from frappe.model.document import Document
 
 class AirplaneTicket(Document):
 	def validate(self):
+		flight_doc = frappe.get_doc("Airplane Flight", self.flight)
+		airplane_doc = frappe.get_doc("Airplane", flight_doc.airplane)
+		ticket_count = frappe.db.count("Airplane Ticket")
+		if ticket_count >= airplane_doc.capacity:
+			frappe.throw(f"Max capacity of {airplane_doc.capacity} reached!!!")
+
 		total_amount = self.flight_price
 		items_list = []
 
@@ -27,7 +33,8 @@ class AirplaneTicket(Document):
 			frappe.throw("Passenger has not boarded yet, change the status to boarded to continue..")
 
 	def populate_seat(self):
-		self.seat = f"{random.randint(0,100)}{random.choice(string.ascii_uppercase[:5])}"
+		if not self.seat:
+			self.seat = f"{random.randint(0,100)}{random.choice(string.ascii_uppercase[:5])}"
 
 	def before_save(self):
 		self.populate_seat()

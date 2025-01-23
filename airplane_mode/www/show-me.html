@@ -1,1 +1,10 @@
-<div style='{% if frappe.form_dict.color %}background-color:{{frappe.form_dict.color}}{% else %}background-color:black{% endif %};width: 200px;height: 100px;'></div>
+<style>
+    #color_rectangle{
+        width: 300px;
+        height: 100px;
+        background-color:{% if frappe.form_dict.color %}{{frappe.form_dict.color}}{% else %}black{% endif %}
+    }
+</style>
+
+ <div id="color_rectangle"></div>
+
