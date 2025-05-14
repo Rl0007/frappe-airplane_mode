@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "UUID",
+ "creation": "2025-01-24 08:16:40.536554",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_details_section",
+  "tenant",
+  "rent_amount",
+  "status",
+  "column_break_bypj",
+  "last_payment_date",
+  "next_due_date",
+  "contract_expiry_date",
+  "auto_extend",
+  "shop_details_section",
+  "shops",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bypj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_payment_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Last Payment Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_due_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Next Due Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Contract Expiry Date",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_extend",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Auto Extend"
+  },
+  {
+   "bold": 1,
+   "fieldname": "shop_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Details"
+  },
+  {
+   "fieldname": "shops",
+   "fieldtype": "Table",
+   "label": "Shops",
+   "options": "Airport Shop Contract"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Contract Detail",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Paid\nUnpaid\nExpired"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-25 11:04:01.422048",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Contract Detail",
+ "naming_rule": "UUID",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "tenant"
+}

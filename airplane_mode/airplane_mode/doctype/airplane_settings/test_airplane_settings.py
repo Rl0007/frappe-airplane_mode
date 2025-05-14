@@ -1,0 +1,29 @@
+# Copyright (c) 2025, Rl0007 and Contributors
+# See license.txt
+
+# import frappe
+from frappe.tests import IntegrationTestCase, UnitTestCase
+
+# On IntegrationTestCase, the doctype test records and all
+# link-field test record dependencies are recursively loaded
+# Use these module variables to add/remove to/from that list
+EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
+IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
+
+
+class UnitTestAirplaneSettings(UnitTestCase):
+	"""
+	Unit tests for AirplaneSettings.
+	Use this class for testing individual functions and methods.
+	"""
+
+	pass
+
+
+class IntegrationTestAirplaneSettings(IntegrationTestCase):
+	"""
+	Integration tests for AirplaneSettings.
+	Use this class for testing interactions between multiple components.
+	"""
+
+	pass

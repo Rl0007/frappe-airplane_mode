@@ -1,0 +1,75 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<!-- <h1>{{ title |e }}</h1> -->
+<div class="content pb-5 mb-5">
+    <div class="  p-1 bg-white flex-row align-items-center " >
+      <h4 class="my-1" style="cursor: pointer;"
+      onclick="history.back()">  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-arrow-left-short " viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+      </svg>Shop Details</h4>
+    </div>
+    <div class="container p-md-3 pb-sm-0">
+        <div class="row justify-content-center ">
+            <div class="col-12 col-md-6 col-xl-4 mt-1 mt-md-0 mb-3 mb-md-0">
+                {% include "templates/portal_elements/airport_shop_card.html" %}
+            </div>
+
+            <div class="  mb-2 rounded-4  col-12 col-md-6 col-xl-4 ">
+                <div style="height: 230px;background-image: url('{{doc.shop_image}}');background-size: cover; background-position: center;"
+                    class="adjust-cards rounded-4 card m-0 p-1">
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class=" col-12 col-md-6 col-xl-4 d-md-flex d-none">
+
+            </div>
+            <div class=" col-12 col-md-6 col-xl-4 ">
+                <div class="card  mb-2 rounded-4  adjust-cards p-2">
+                    <h6>Contract Details</h6>
+
+                    <div class="row ms-1 mt-2">
+
+                        {% for price_plan in range(3) %}
+                        <span value="{{ price_plan + 1 }}" class="badge bg-light border border-0 text-muted rounded-3 p-2 m-1 font-12" style="width: fit-content;">
+                            Per {{ ['Month', 'Quarter', 'Year'][price_plan] }}
+                            <hr class="m-1">
+                            <span class="text-wrap">&#8377; {{ [500, 1500, 6000][price_plan] }}</span>
+                            <div class="vr"></div>
+                            {{ ['1 Month', '3 Months', '1 Year'][price_plan] }}
+                        </span>
+                    {% endfor %}
+
+                    </div>
+
+                    <button
+                    class="btn mt-2 btn-primary rounded-3 d-flex flex-row align-items-center py-1 flex-fill justify-content-center"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                      </svg>&nbsp;Contact Us</button>
+
+
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+
+<!-- this is a sample default web page template -->

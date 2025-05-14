@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-23 10:45:04.295061",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pilot_per_plane",
+  "flight_attendant_per_plane",
+  "column_break_djyz",
+  "air_hostess_per_plane"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "pilot_per_plane",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Pilot Per Plane",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "flight_attendant_per_plane",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Flight Attendant Per Plane",
+   "reqd": 1
+  },
+  {
+   "default": "4",
+   "fieldname": "air_hostess_per_plane",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Air Hostess Per Plane",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_djyz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-01-23 10:46:38.025459",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Airplane Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

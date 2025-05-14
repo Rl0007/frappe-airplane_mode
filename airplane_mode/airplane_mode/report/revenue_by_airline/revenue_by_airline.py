@@ -48,7 +48,7 @@ def get_columns() -> list[dict]:
 		{
 			"label": _("Airline"),  # The name of the airline
 			"fieldname": "airline",  # Matches the field alias in the query
-			"fieldtype": "link",  # Link type for the airline field
+			"fieldtype": "Link",  # Link type for the airline field
 			"width": 200,  # Optional: specify column width
 		},
 		{

@@ -9,6 +9,7 @@
   "section_break_kjj5",
   "passenger",
   "status",
+  "gate",
   "column_break_jout",
   "flight",
   "seat",
@@ -175,12 +176,20 @@
   {
    "fieldname": "column_break_kqxe",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate",
+   "fieldtype": "Data",
+   "label": "Gate",
+   "read_only": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-22 16:27:03.203211",
+ "modified": "2025-01-23 11:59:27.879521",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

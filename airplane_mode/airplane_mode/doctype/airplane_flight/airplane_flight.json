@@ -7,6 +7,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "flight_details_tab",
   "section_break_x6on",
   "airplane",
   "column_break_zcjq",
@@ -27,7 +28,11 @@
   "route",
   "airline",
   "column_break_diwp",
-  "published"
+  "published",
+  "gate_number",
+  "tab_2_tab",
+  "crew_details_section",
+  "crew_members"
  ],
  "fields": [
   {
@@ -161,6 +166,35 @@
    "is_virtual": 1,
    "label": "Airline",
    "read_only": 1
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Crew Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "crew_details_section",
+   "fieldtype": "Section Break",
+   "label": "Crew Details"
+  },
+  {
+   "fieldname": "crew_members",
+   "fieldtype": "Table",
+   "label": "Crew Members",
+   "options": "Crew Member Flight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flight_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Flight Details"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
@@ -173,7 +207,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-01-22 16:26:07.131337",
+ "modified": "2025-01-23 11:58:09.984658",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

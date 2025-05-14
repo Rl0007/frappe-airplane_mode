@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2025-01-15 12:43:36.262277",
@@ -52,7 +53,7 @@
    "link_fieldname": "airline"
   }
  ],
- "modified": "2025-01-22 16:21:59.989457",
+ "modified": "2025-05-14 11:00:11.995504",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",

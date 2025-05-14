@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "UUID",
+ "creation": "2025-01-24 08:23:55.844806",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shop",
+  "airport",
+  "area",
+  "column_break_fnxr",
+  "rent"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Airport Shop",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.airport",
+   "fieldname": "airport",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Airport",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "shop.area",
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "is_virtual": 1,
+   "label": "Area",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fnxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "500",
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "label": "Rent",
+   "non_negative": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-24 08:27:31.187830",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Airport Shop Contract",
+ "naming_rule": "UUID",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
