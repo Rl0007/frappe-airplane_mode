@@ -9,11 +9,9 @@
   "contract_details_section",
   "tenant",
   "rent_amount",
-  "status",
   "column_break_bypj",
   "contract_start_date",
   "contract_expiry_date",
-  "auto_extend",
   "shop_details_section",
   "shops",
   "amended_from"
@@ -52,13 +50,6 @@
    "reqd": 1
   },
   {
-   "default": "1",
-   "fieldname": "auto_extend",
-   "fieldtype": "Check",
-   "hidden": 1,
-   "label": "Auto Extend"
-  },
-  {
    "bold": 1,
    "fieldname": "shop_details_section",
    "fieldtype": "Section Break",
@@ -81,13 +72,6 @@
    "search_index": 1
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "label": "Status",
-   "options": "Paid\nUnpaid\nExpired"
-  },
-  {
    "fieldname": "contract_start_date",
    "fieldtype": "Date",
    "label": "Contract Start Date",
@@ -102,7 +86,7 @@
    "link_fieldname": "contract"
   }
  ],
- "modified": "2025-05-16 10:48:01.888517",
+ "modified": "2025-05-16 23:42:48.315873",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Contract Detail",
