@@ -245,7 +245,7 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
-fixtures = ["Print Format"]
+fixtures = ["Print Format", "Shop Type"]
 
 scheduler_events = {
 	"monthly": ["airplane_mode.airport_shop_management.api.rent_reminders.send_rent_due_reminders"],

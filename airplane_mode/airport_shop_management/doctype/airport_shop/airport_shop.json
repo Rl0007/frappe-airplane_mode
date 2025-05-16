@@ -11,6 +11,7 @@
   "shop_name",
   "status",
   "shop_image",
+  "type",
   "column_break_tdyg",
   "airport",
   "area",
@@ -41,7 +42,8 @@
    "in_list_view": 1,
    "label": "Airport",
    "options": "Airport",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "description": "In Square Meter",
@@ -73,13 +75,20 @@
    "fieldname": "shop_image",
    "fieldtype": "Attach Image",
    "label": "Shop Image"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "link_filters": "[[\"Shop Type\",\"enabled\",\"=\",1]]",
+   "options": "Shop Type"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-05-16 12:11:29.334291",
+ "modified": "2025-05-16 18:08:17.229564",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Airport Shop",
