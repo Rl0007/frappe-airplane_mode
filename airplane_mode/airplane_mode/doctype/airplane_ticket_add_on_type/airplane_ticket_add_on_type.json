@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2025-01-20 11:47:30.626309",
@@ -19,7 +20,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-22 16:28:12.316290",
+ "modified": "2025-05-14 11:54:26.582304",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket Add-on Type",

@@ -28,7 +28,7 @@
   "route",
   "airline",
   "column_break_diwp",
-  "published",
+  "is_published",
   "gate_number",
   "tab_2_tab",
   "crew_details_section",
@@ -153,13 +153,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "allow_on_submit": 1,
-   "default": "0",
-   "fieldname": "published",
-   "fieldtype": "Check",
-   "label": "Published"
-  },
-  {
    "fetch_from": "airplane.airline",
    "fieldname": "airline",
    "fieldtype": "Data",
@@ -195,11 +188,18 @@
    "fieldtype": "Data",
    "label": "Gate Number",
    "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is published"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "is_published_field": "published",
+ "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [
   {
@@ -207,7 +207,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-01-23 11:58:09.984658",
+ "modified": "2025-05-14 13:16:47.881292",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

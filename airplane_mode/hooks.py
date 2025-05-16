@@ -245,3 +245,13 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = ["Print Format"]
+
+scheduler_events = {
+	"monthly": ["airplane_mode.airport_shop_management.api.rent_reminders.send_rent_due_reminders"],
+	"daily": ["airplane_mode.airplane_mode.api.update_shop_status.update_shop_status_for_expired_contracts"],
+}
+
+website_route_rules = [
+	{"from_route": "/airport_shop", "to_route": "/shops/list.html"},
+]

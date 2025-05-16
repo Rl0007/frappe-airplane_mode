@@ -11,7 +11,9 @@
   "payment_date",
   "column_break_welq",
   "tenant",
-  "status"
+  "status",
+  "due_date",
+  "amended_from"
  ],
  "fields": [
   {
@@ -47,9 +49,9 @@
    "default": "Unpaid",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Paid\nUnpaid",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -57,11 +59,29 @@
    "fieldtype": "Date",
    "label": "Payment Date",
    "read_only": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airport Shop Invoice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-01-24 21:39:09.805572",
+ "modified": "2025-05-16 10:45:42.835871",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Airport Shop Invoice",

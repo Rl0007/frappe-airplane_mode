@@ -1,0 +1,17 @@
+
+		.avatar-md {
+	  height: 4.5rem;
+	  width: 4.5rem;
+	}
+	.rounded-4 {
+	  border-radius: 1rem
+	}
+	.font-12 {
+	  font-size: 12px !important;
+	}
+	.font-14 {
+	  font-size: 14px !important;
+	}
+	h6{
+		font-size: .81rem !important;
+	}

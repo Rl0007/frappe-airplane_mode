@@ -1,0 +1,19 @@
+{% extends "templates/layout.html" %}
+
+
+{% block body %}
+<div class="  p-1 bg-white flex-row align-items-center ">
+    <h4 class="my-1">
+        </svg>Shops</h4>
+</div>
+<div class="d-flex row">
+    {% for doc in shops %}
+    <div class="col-sm-12 col-md-6 col-xl-4 mb-3 px-0 px-sm-1">
+        <div class="m-2">
+            {% include 'templates/components/airport_shop_card.html' %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

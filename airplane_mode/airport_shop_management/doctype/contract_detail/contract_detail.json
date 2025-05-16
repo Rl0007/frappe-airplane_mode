@@ -11,8 +11,7 @@
   "rent_amount",
   "status",
   "column_break_bypj",
-  "last_payment_date",
-  "next_due_date",
+  "contract_start_date",
   "contract_expiry_date",
   "auto_extend",
   "shop_details_section",
@@ -44,20 +43,6 @@
   {
    "fieldname": "column_break_bypj",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "last_payment_date",
-   "fieldtype": "Date",
-   "hidden": 1,
-   "label": "Last Payment Date",
-   "read_only": 1
-  },
-  {
-   "fieldname": "next_due_date",
-   "fieldtype": "Date",
-   "hidden": 1,
-   "label": "Next Due Date",
-   "read_only": 1
   },
   {
    "fieldname": "contract_expiry_date",
@@ -101,12 +86,23 @@
    "hidden": 1,
    "label": "Status",
    "options": "Paid\nUnpaid\nExpired"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2025-01-25 11:04:01.422048",
+ "links": [
+  {
+   "link_doctype": "Airport Shop Invoice",
+   "link_fieldname": "contract"
+  }
+ ],
+ "modified": "2025-05-16 10:48:01.888517",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Contract Detail",

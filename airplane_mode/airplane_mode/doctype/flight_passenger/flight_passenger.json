@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "autoincrement",
  "creation": "2025-01-16 19:16:24.902202",
@@ -50,7 +51,7 @@
    "link_fieldname": "passenger"
   }
  ],
- "modified": "2025-01-20 12:08:56.499852",
+ "modified": "2025-05-14 11:20:43.879335",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Flight Passenger",

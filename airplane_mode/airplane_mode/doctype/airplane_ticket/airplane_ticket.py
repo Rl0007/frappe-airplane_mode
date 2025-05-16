@@ -10,8 +10,8 @@ from frappe.model.document import Document
 
 class AirplaneTicket(Document):
 	def validate(self):
-		flight_doc = frappe.get_doc("Airplane Flight", self.flight)
-		airplane_doc = frappe.get_doc("Airplane", flight_doc.airplane)
+		flight_doc = frappe.get_cached_doc("Airplane Flight", self.flight)
+		airplane_doc = frappe.get_cached_doc("Airplane", flight_doc.airplane)
 		ticket_count = frappe.db.count("Airplane Ticket")
 		if ticket_count >= airplane_doc.capacity:
 			frappe.throw(f"Max capacity of {airplane_doc.capacity} reached!!!")
